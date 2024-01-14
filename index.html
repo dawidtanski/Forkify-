@@ -73,7 +73,7 @@
                         <h4 class="preview__name">
                           Pasta with Tomato Cream ...
                         </h4>
-                        <p class="preview__publisher">The Pioneer Woman</p>
+                        <p class="preview__author">The Pioneer Woman</p>
                       </div>
                     </a>
                   </li> -->
@@ -85,16 +85,11 @@
       </header>
 
       <div class="search-results">
-        <ul class="results">
-          <!-- <button class=".btn--sortbying">
-            <span>Sort by number of ingredient </span>
-          </button>
-          <button class=".btn--.btn--sortbydur">
-            <span>Sort by prepairing duration</span>
-          </button>  -->
-          <!-- <a href ="#5ed6604591c37cdc054bc886">RECIPE1</a></a>
-          <a href ="#5ed6604591c37cdc054bcc40">RECIPE2</a></a> -->
-          <!-- 
+        <div class="sort-btn">
+          <div></div>
+        </div>
+        <ul class="results"></ul>
+        <!-- 
           <li class="preview">
             <a class="preview__link preview__link--active" href="#23456">
               <figure class="preview__fig">
@@ -112,7 +107,6 @@
             </a>
           </li>
            -->
-        </ul>
 
         <div class="pagination">
           <!-- <button class="btn--inline pagination__btn--prev">
@@ -136,7 +130,8 @@
             target="_blank"
             href="https://twitter.com/jonasschmedtman"
             >Jonas Schmedtmann</a
-          >. Built by Dawid Tański.
+          >. Use for learning or your portfolio. Don't use to teach. Don't claim
+          as your own.
         </p>
       </div>
 
@@ -267,25 +262,29 @@
     <div class="add-recipe-window hidden">
       <button class="btn--close-modal">&times;</button>
       <form class="upload">
-        <div class="upload__column">
+        <div class="upload__column2">
           <h3 class="upload__heading">Recipe data</h3>
           <label>Title</label>
-          <input value="TEST23" required name="title" type="text" />
+          <input value="Type here title of the recipe" required name="title" type="text" />
           <label>URL</label>
-          <input value="TEST23" required name="sourceUrl" type="text" />
+          <input value="Type here URL of the recipe" required name="sourceUrl" type="text" />
           <label>Image URL</label>
-          <input value="TEST23" required name="image" type="text" />
+          <input value="Type here URL of the image of recipe" required name="image" type="text" />
           <label>Publisher</label>
-          <input value="TEST23" required name="publisher" type="text" />
-          <label>Prep time</label>
-          <input value="23" required name="cookingTime" type="number" />
+          <input value="Type here name of the publisher" required name="publisher" type="text" />
+          <label>Prep time (minutes) </label>
+          <input value="1" required name="cookingTime" type="number" />
           <label>Servings</label>
-          <input value="23" required name="servings" type="number" />
+          <input value="1" required name="servings" type="number" />
         </div>
 
         <div class="upload__column">
           <h3 class="upload__heading">Ingredients</h3>
-          <label>Ingredient 1</label>
+
+          <button class = "btn_add_ing">
+            <span>Add ingredient</span>
+          </button>
+          <!-- <label>Ingredient 1</label>
           <input
             value="0.5,kg,Rice"
             type="text"
@@ -293,47 +292,157 @@
             name="ingredient-1"
             placeholder="Format: 'Quantity,Unit,Description'"
           />
+          <label>Unit</label>
+          <input
+            value="kg"
+            type="text"
+            required
+            name="ingredient-unit-1"
+            placeholder="Unit"
+          /> -->
+
+          <!-- <label>Ingredient 1</label>
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-quantity-1"
+            placeholder="Quantity"
+          />
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-unit-1"
+            placeholder="Unit"
+          />
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-type-1"
+            placeholder="Type"
+          />
+
           <label>Ingredient 2</label>
           <input
-            value="1,,Avocado"
+            value=""
             type="text"
-            name="ingredient-2"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            required
+            name="ingredient-quantity-2"
+            placeholder="Quantity"
           />
-          <label>Ingredient 3</label>
           <input
-            value=",,salt"
+            value=""
             type="text"
-            name="ingredient-3"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            required
+            name="ingredient-unit-2"
+            placeholder="Unit"
+          />
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-type-2"
+            placeholder="Type"
+          /> -->
+          <!-- <label>Ingredient 3</label>
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-quantity-3"
+            placeholder="Quantity"
+          />
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-unit-3"
+            placeholder="Unit"
+          />
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-type-3"
+            placeholder="Type"
           />
           <label>Ingredient 4</label>
           <input
+            value=""
             type="text"
-            name="ingredient-4"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            required
+            name="ingredient-quantity-4"
+            placeholder="Quantity"
+          />
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-unit-4"
+            placeholder="Unit"
+          />
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-type-4"
+            placeholder="Type"
           />
           <label>Ingredient 5</label>
           <input
+            value=""
             type="text"
-            name="ingredient-5"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            required
+            name="ingredient-quantity-5"
+            placeholder="Quantity"
+          />
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-unit-5"
+            placeholder="Unit"
+          />
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-type-5"
+            placeholder="Type"
           />
           <label>Ingredient 6</label>
           <input
+            value=""
             type="text"
-            name="ingredient-6"
-            placeholder="Format: 'Quantity,Unit,Description'"
+            required
+            name="ingredient-quantity-6"
+            placeholder="Quantity"
           />
-        </div>
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-unit-6"
+            placeholder="Unit"
+          />
+          <input
+            value=""
+            type="text"
+            required
+            name="ingredient-type-6"
+            placeholder="Type"
+          /> -->
 
-        <button class="btn upload__btn">
-          <svg>
-            <use href="src/img/icons.svg#icon-upload-cloud"></use>
-          </svg>
-          <span>Upload</span>
-        </button>
-      </form>
+          <button class="btn upload__btn">
+            <svg>
+              <use href="src/img/icons.svg#icon-upload-cloud"></use>
+            </svg>
+            <span>Upload</span>
+          </button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
