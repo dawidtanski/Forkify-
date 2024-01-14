@@ -42,26 +42,83 @@
   opacity: 0;
 }
 
+// .rec-upload-btn-container {
+//   display: block;
+//   position: fixed;
+//   top: 90%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 100rem;
+//   background-color: white;
+//   border-radius: 9px;
+
+//   padding: 5rem 6rem;
+// }
+
+// .input-rec-data {
+//   width: 30rem;
+//   display: inline-block;
+//   font-size: 1.4rem;
+//   padding: 1rem 0.8rem;
+//   border: 1px solid #ddd;
+//   border-radius: 0.5rem;
+//   transition: all 0.2s;
+// }
+
+.btn_add_ing {
+  text-align: center;
+  color: $color-primary;
+  font-size: 1.3rem;
+  width: 12rxem;
+  font-weight: 600;
+  border: none;
+  background-color: $color-grey-light-1;
+  padding: 0.6rem 0.2rem;
+  border-radius: 10rem;
+  cursor: pointer;
+
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload__btn {
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .upload {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
 
   &__column {
-    display: grid;
+    // display: grid;
+    margin-left: 90px;
+    display: block;
     grid-template-columns: 1fr 2.8fr;
     align-items: center;
     gap: 1.5rem;
 
     & label {
+      display: block;
       font-size: 1.5rem;
       font-weight: 600;
       color: inherit;
     }
 
     & input {
-      font-size: 1.5rem;
-      padding: 0.8rem 1rem;
+      width: 10rem;
+      display: inline-block;
+      font-size: 1.4rem;
+      padding: 1rem 0.8rem;
       border: 1px solid #ddd;
       border-radius: 0.5rem;
       transition: all 0.2s;
@@ -76,11 +133,40 @@
         background-color: $color-grey-light-1;
       }
     }
+  }
 
-    & button {
-      grid-column: 1 / span 2;
-      justify-self: center;
-      margin-top: 1rem;
+  &__column2 {
+    // display: grid;
+    display: block;
+    grid-template-columns: 1fr 2.8fr;
+    align-items: center;
+    gap: 1.5rem;
+
+    & label {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    & input {
+      width: 30rem;
+      display: inline-block;
+      font-size: 1.4rem;
+      padding: 1rem 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+
+      &::placeholder {
+        color: $color-grey-light-3;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid $color-primary;
+        background-color: $color-grey-light-1;
+      }
     }
   }
 
@@ -92,8 +178,8 @@
     grid-column: 1/-1;
   }
 
-  &__btn {
-    grid-column: 1 / -1;
-    justify-self: center;
-  }
+  // &__btn {
+  //   grid-column: 1 /-1;
+  //   justify-self: center;
+  // }
 }

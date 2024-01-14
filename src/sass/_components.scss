@@ -90,42 +90,22 @@
   }
 }
 
-.btn--actual1 {
-  display: flex;
-  align-items: center;
-  margin-right: 3rem;
-  color: $color-primary;
-  box-sizing: content-box;
-  width: 8rem;
-  height: 4rem;
-  font-size: 1.5rem;
+.btn-sort {
   text-align: center;
-  // font-weight: 60;
+  color: $color-primary;
+  font-size: 1.3rem;
+  width: 20rem;
+  font-weight: 600;
   border: none;
-  background-color: transparent;
+  background-color: $color-grey-light-1;
+  padding: 0.8rem 0.9rem;
   border-radius: 10rem;
-  // cursor: pointer;
-  position: relative;
-  left: -10;
+  cursor: pointer;
 
   display: flex;
   align-items: center;
-  transition: all 0.2s;
-}
+  justify-content: center; /* Wyśrodkowanie w poziomie */
 
-.btn--sortbying {
-  color: $color-primary;
-  font-size: 1.3rem;
-  width: 22rem;
-  font-weight: 600;
-  border: none;
-  background-color: $color-grey-light-1;
-  padding: 0.8rem 1.2rem;
-  border-radius: 10rem;
-  cursor: pointer;
-
-  display: flex;
-  align-items: left;
   transition: all 0.2s;
 
   span {
@@ -142,33 +122,23 @@
   }
 }
 
-.btn--sortbydur {
-  color: $color-primary;
-  font-size: 1.3rem;
-  width: 22rem;
-  font-weight: 600;
-  border: none;
-  background-color: $color-grey-light-1;
-  padding: 0.8rem 1.2rem;
-  border-radius: 10rem;
-  cursor: pointer;
+.sort-icon {
+  width: 24px;
+  height: 24px;
+  stroke: $color-grey-light-1;
+  transform: rotate(360deg);
+}
 
-  display: flex;
-  align-items: left;
-  transition: all 0.2s;
+.btn-sort.desc .sort-icon {
+  transform: rotate(180deg);
+}
 
-  span {
-    margin: 0 0.4rem;
-  }
-
-  &:hover {
-    color: $color-grad-2;
-    background-color: $color-grey-light-2;
-  }
-
-  &:focus {
-    outline: none;
-  }
+.btn-sort.sort-active {
+  color: $color-grey-light-1;
+  background-color: $color-primary;
+}
+.btn-sort.sort-active .sort-icon {
+  stroke: $color-grey-light-1;
 }
 
 .btn--round {
@@ -246,6 +216,32 @@
 .link:link,
 .link:visited {
   color: $color-grey-dark-2;
+}
+
+.page-number {
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  width: 20%;
+}
+
+.first-page-number {
+  margin-left: 120px;
+  margin-right: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 20%;
+}
+
+.last-page-number {
+  margin-left: -50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 20%;
 }
 
 .spinner {

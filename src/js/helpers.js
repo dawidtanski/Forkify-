@@ -1,4 +1,6 @@
-import { TIMEOUT_SEC } from './config';
+import 'regenerator-runtime/runtime';
+import 'core-js/stable';
+import { TIMEOUT_SEC } from './config.js';
 
 const timeout = function (s) {
   return new Promise(function (_, reject) {
@@ -26,21 +28,20 @@ export const AJAX = async function (url, uploadData = undefined) {
     if (!res.ok) throw new Error(`${data.message} (${res.status})`);
     return data;
   } catch (err) {
-    // Throwing an error from one async function to another async using previous one
     throw err;
   }
 };
+
 /*
 export const getJSON = async function (url) {
   try {
     const fetchPro = fetch(url);
-    const res = await Promise.race([fetch(url), timeout(TIMEOUT_SEC)]);
+    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
     const data = await res.json();
 
     if (!res.ok) throw new Error(`${data.message} (${res.status})`);
     return data;
   } catch (err) {
-    // Throwing an error from one async function to another async using previous one
     throw err;
   }
 };
@@ -52,7 +53,6 @@ export const sendJSON = async function (url, uploadData) {
       headers: {
         'Content-Type': 'application/json',
       },
-      // Data has to be sended to API with JSON format
       body: JSON.stringify(uploadData),
     });
 
@@ -62,7 +62,6 @@ export const sendJSON = async function (url, uploadData) {
     if (!res.ok) throw new Error(`${data.message} (${res.status})`);
     return data;
   } catch (err) {
-    // Throwing an error from one async function to another async using previous one
     throw err;
   }
 };
