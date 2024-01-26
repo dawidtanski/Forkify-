@@ -1,6 +1,9 @@
 import View from './view.js';
 import icons from 'url:../../img/icons.svg'; // Parcel 2
 
+/*
+Dodaj czyszczenie zawartości po zamknięciu formularza */
+
 class AddRecipeView extends View {
   _parentElement = document.querySelector('.upload');
   _message = 'Recipe was successfully uploaded :)';
@@ -123,14 +126,14 @@ class AddRecipeView extends View {
       // }
 
       // data.ingredients = ingredients;
-      console.log('Before submitting form - Data:', data);
+      // console.log('Before submitting form - Data:', data);
       handler(data);
-      console.log('After submitting form - Data:', data);
-      toggleWindow();
+      // console.log('After submitting form - Data:', data);
+      // toggleWindow();
     });
   }
 
-  _generateMarkup() {}
+  // _generateMarkup() {}
 }
 
 export default new AddRecipeView();
