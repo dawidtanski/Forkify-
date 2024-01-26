@@ -181,8 +181,11 @@ const init = function () {
 };
 init();
 
-const clearBookmarks = function () {
+export const clearBookmarks = function () {
+  this.state.bookmarks = [];
   localStorage.clear('bookmarks');
+  persistBookmarks();
+  console.log(`Bookmarks cleared`);
 };
 // clearBookmarks();
 
